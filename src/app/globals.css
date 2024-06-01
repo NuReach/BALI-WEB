@@ -17,3 +17,6 @@
 }
 
 
+.dark-background {
+  filter: brightness(0.6); /* Adjust the value between 0 (black) and 1 (original) */
+}
