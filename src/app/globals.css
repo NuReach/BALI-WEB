@@ -18,5 +18,24 @@
 
 
 .dark-background {
-  filter: brightness(0.6); /* Adjust the value between 0 (black) and 1 (original) */
+  filter: brightness(0.4); /* Adjust the value between 0 (black) and 1 (original) */
+}
+
+.custom-scrollbar {
+  /* Hide default scrollbar */
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  /* Style the custom scrollbar (optional) */
+  &::-webkit-scrollbar {
+    width: 10px; /* Change this value for desired width */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #eee; /* Change this for thumb color */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ccc; /* Change this for track color */
+  }
 }
