@@ -2,13 +2,14 @@ import Image from "next/image";
 import Navbar from "./components/ui/Navbar";
 import { TypeWritten } from "./components/ui/TypeWritten";
 import { ParallaxScrollDemo } from "./components/ui/ParallaxScrollDemo";
+import RoomOne from "./components/ui/RoomOne";
 export default function Home() {
   return (
     <main className="">
       <div>
         <Navbar />
       </div>
-      <div className="">
+      <section className="">
        <Image
           src="/cover.jpg" // Replace with your image path
           alt="Background Image" // Provide an alt text description
@@ -21,15 +22,25 @@ export default function Home() {
         <div className="absolute top-32 px-6 md:top-60 lg:w-[600px] lg:left-36 w-full">
           <TypeWritten />
         </div>
-      </div>
-      <div className="p-9">
+      </section>
+      <section className="p-9">
+        <div className="font-bold text-3xl flex w-full justify-center items-center gap-3">
+          <div className="w-full h-1 bg-black"></div>
+          <p>Room</p>
+          <div className="w-full h-1 bg-black"></div>
+        </div>
+        <div>
+          <RoomOne />
+        </div>
+      </section>
+      <section className="p-9">
         <div className="font-bold text-3xl flex w-full justify-center items-center gap-3">
           <div className="w-full h-1 bg-black"></div>
           <p>Photo</p>
           <div className="w-full h-1 bg-black"></div>
         </div>
         <ParallaxScrollDemo />
-      </div>
+      </section>
     </main>
   );
 }
