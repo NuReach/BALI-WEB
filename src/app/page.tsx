@@ -24,6 +24,14 @@ export default function Home() {
         <div className="absolute top-32 px-6 md:top-60 lg:w-[600px] lg:left-36 w-full">
           <TypeWritten />
         </div>
+        <div className="absolute w-full flex justify-center top-48 md:top-80 lg:w-[600px]  lg:top-[410px] lg:left-36  text-white">
+          <div className="flex flex-col justify-center items-center">
+            <p className="text-center text-xs px-6 md:text-lg">Booking your stay at our resort is as easy as a breeze</p>
+            <div className="mt-3">
+              <button className="p-3 px-6 bg-black rounded-lg hover:scale-105 transition text-sm shadow-sm shadow-white">Book Now</button>
+            </div>
+          </div>
+        </div>
       </section>
       <section className="p-9">
         <div className="font-bold text-3xl flex w-full justify-center items-center gap-3">
