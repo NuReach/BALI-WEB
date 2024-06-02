@@ -3,6 +3,7 @@ import Navbar from "./components/ui/Navbar";
 import { TypeWritten } from "./components/ui/TypeWritten";
 import { ParallaxScrollDemo } from "./components/ui/ParallaxScrollDemo";
 import RoomOne from "./components/ui/RoomOne";
+import RoomTwo from "./components/ui/RoomTwo";
 export default function Home() {
   return (
     <main className="">
@@ -31,6 +32,7 @@ export default function Home() {
         </div>
         <div>
           <RoomOne />
+          <RoomTwo />
         </div>
       </section>
       <section className="p-9">
