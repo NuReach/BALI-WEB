@@ -4,6 +4,7 @@ import { TypeWritten } from "./components/ui/TypeWritten";
 import { ParallaxScrollDemo } from "./components/ui/ParallaxScrollDemo";
 import RoomOne from "./components/ui/RoomOne";
 import RoomTwo from "./components/ui/RoomTwo";
+import Footer from "./components/ui/Footer";
 export default function Home() {
   return (
     <main className="">
@@ -43,6 +44,7 @@ export default function Home() {
         </div>
         <ParallaxScrollDemo />
       </section>
+      <Footer />
     </main>
   );
 }
