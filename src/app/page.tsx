@@ -63,6 +63,15 @@ export default function Home() {
           <BentoGridDemo />
         </div>
       </section>
+      <section className="p-3">
+        <div className="font-bold text-lg md:text-3xl flex w-full justify-center items-center gap-3">
+          <div className="w-full h-1 bg-black"></div>
+          <p>Contact </p>
+          <div className="w-full h-1 bg-black"></div>
+        </div>
+        <div>
+        </div>
+      </section>
       
       <Footer />
     </main>
