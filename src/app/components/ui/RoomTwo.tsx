@@ -1,10 +1,23 @@
+"use client";
+import { motion, useScroll } from 'framer-motion';
 import { AirVent, Bath, Bed, CarFront, Tv, Utensils, Waves, Wifi } from 'lucide-react'
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef } from 'react'
 
 export default function RoomTwo() {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target : ref,
+        offset : [ "0 3" , "1 1" ]
+    })
   return (
-    <div className='p-3 border rounded-lg gap-6 columns-1 lg:columns-2 '>
+    <motion.div
+        ref={ref}   
+        style={{
+            scale : scrollYProgress,
+            opacity:scrollYProgress
+        }}
+        className='p-3 border rounded-lg gap-6 columns-1 lg:columns-2 '>
         <div>
             <Image
              width={1000}
@@ -66,6 +79,6 @@ export default function RoomTwo() {
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }

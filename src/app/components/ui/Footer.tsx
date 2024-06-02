@@ -18,7 +18,7 @@ export default function Footer() {
                     />
                     <Link href={`/`}>Bali Villa Kompot</Link>
                 </div>
-                <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mt-6">
                     <div>
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -34,7 +34,7 @@ export default function Footer() {
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Gitlhub lojfkasjdlsjdalkjlfkdasjlk;</a>
+                                <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Gitkdasjlk;</a>
                             </li>
                             <li>
                                 <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
@@ -45,7 +45,7 @@ export default function Footer() {
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Location </h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Gitlhub lojfkasjdlsjdalkjlfkdasjlk;</a>
+                                <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Gitlhub ;</a>
                             </li>
                             <li>
                                 <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>

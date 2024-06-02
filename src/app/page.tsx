@@ -31,7 +31,7 @@ export default function Home() {
           <p>Room</p>
           <div className="w-full h-1 bg-black"></div>
         </div>
-        <div>
+        <div className="flex flex-col gap-3">
           <RoomOne />
           <RoomTwo />
         </div>
