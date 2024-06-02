@@ -4,14 +4,14 @@ import React from 'react'
 
 export default function RoomOne() {
   return (
-    <div className='p-3 border rounded-lg gap-3 columns-1 lg:columns-2'>
+    <div className='p-3 border rounded-lg gap-6 columns-1 lg:columns-2'>
         <div>
             <Image
              width={1000}
              height={1000}
              alt='roomone'
              src={`/room/roomone.jpg`}
-             className='w-[660px]'
+             className='w-full object-cover'
             /> 
         </div>
         <div className='overflow-hidden'>
