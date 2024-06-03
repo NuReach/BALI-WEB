@@ -6,6 +6,7 @@ import RoomOne from "./components/ui/RoomOne";
 import RoomTwo from "./components/ui/RoomTwo";
 import Footer from "./components/ui/Footer";
 import { BentoGridDemo } from "./components/ui/BentoGridDemo";
+import { Mail, MapPinIcon, Phone } from "lucide-react";
 export default function Home() {
   return (
     <main className="">
@@ -69,8 +70,21 @@ export default function Home() {
           <p>Contact </p>
           <div className="w-full h-1 bg-black"></div>
         </div>
-        <div>
+        <div className="columns-1 md:columns-2 gap-3 space-y-3 px-3 md:px-24 mt-6">
+          <div className="border rounded-lg p-9 gap-3 flex flex-col items-center justify-center h-full md:h-48 "> 
+              <h1 className="font-bold text-lg">Phone</h1>
+              <Phone />
+              <p>+85578441752</p>
+          </div>
+          <div className="border rounded-lg p-9 gap-3 flex flex-col items-center justify-center h-full md:h-48 "> 
+              <h1 className="font-bold text-lg">Address</h1>
+              <MapPinIcon />
+              <p className="text-center">Cambodia, Kompot, Taneb Street, Krong Kampot 12342</p>
+          </div>
         </div>
+      </section>
+      <section className=" px-3 md:px-28">
+        <iframe  className="w-full h-[450px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.818965259291!2d104.14642157487991!3d10.593323089544587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31083751b9aa177d%3A0xbfb09980843da450!2sBali%20Villa%20Kampot!5e0!3m2!1sen!2skh!4v1717401876702!5m2!1sen!2skh"></iframe>
       </section>
       
       <Footer />
