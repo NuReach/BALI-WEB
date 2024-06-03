@@ -20,6 +20,7 @@ export default function Navbar() {
         <div className=' gap-3 w-[420px] justify-between hidden md:flex'>
             <Link href={`/`}>Home</Link>
             <Link href={`/`}>Room</Link>
+            <Link href={`/`}>Activity</Link>
             <Link href={`/`}>Photo</Link>
             <Link href={`/`}>Contact</Link>
         </div>

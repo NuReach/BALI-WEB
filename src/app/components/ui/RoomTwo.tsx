@@ -24,7 +24,7 @@ export default function RoomTwo() {
              height={1000}
              alt='roomone'
              src={`/room/roomtwo.jpg`}
-             className='w-full object-cover'
+             className='w-full object-cover rounded-lg'
             /> 
         </div>
         <div className='overflow-hidden'>
