@@ -7,9 +7,9 @@ import RoomOne from "./components/ui/RoomOne";
 import RoomTwo from "./components/ui/RoomTwo";
 import Footer from "./components/ui/Footer";
 import { BentoGridDemo } from "./components/ui/BentoGridDemo";
-import { MapPinIcon, Phone } from "lucide-react";
+import { ArrowUp, ArrowUp01, ArrowUpNarrowWide, MapPinIcon, Phone } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 export default function Home() {
   const searchParams = useSearchParams();
   const part = searchParams.get('part');
@@ -18,7 +18,31 @@ export default function Home() {
   const photoRef = useRef(null);
   const activityRef = useRef(null);
   const contactRef = useRef(null);
-  console.log(part);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  console.log(showScrollButton);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const triggerPoint = window.innerHeight * 0.3; // 10% of viewport height
+
+      if (scrollPosition > triggerPoint) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Cleanup
+    };
+  }, []); // Empty dependency array to run only once on mount
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   useEffect(()=>{
     if (part === 'home' && homeRef.current) {
       (homeRef.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
@@ -46,6 +70,7 @@ export default function Home() {
   },[part])
   return (
     <main className="">
+
       <div>
         <Navbar />
       </div>
@@ -71,6 +96,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {showScrollButton && (
+        <button className="scroll-to-top flex items-center justify-center  fixed z-50 bottom-9 text-white right-9 bg-black h-12 w-12 rounded-full" onClick={scrollToTop}>
+          <ArrowUp />
+        </button>
+      )}
       <section ref={roomRef} className="p-3">
         <div className="font-bold text-3xl flex w-full justify-center items-center gap-3">
           <div className="w-full h-1 bg-black"></div>
