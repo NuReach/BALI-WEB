@@ -43,7 +43,7 @@ const items = [
     header: <Image alt="fishing" width={300} height={300} src={'/fishing.jpg'} className="rounded-lg overflow-hidden object-cover" />,
   },
   {
-    title: "Convenience at Your Fingertips: Explore Our Resort's Minimar",
+    title: "Convenience at Your Fingertips: Explore Our Resort's Minimart",
     description: "Stocked with all your essentials and a variety of indulgences, our resort's minimart ensures convenience and comfort throughout your stay.",
     header: <Image alt="minimart" width={300} height={300} src={'/minimart.jpg'} className="rounded-lg w-full overflow-hidden object-cover" />,
   },

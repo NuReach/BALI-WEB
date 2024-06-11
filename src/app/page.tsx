@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import Navbar from "./components/ui/Navbar";
 import { TypeWritten } from "./components/ui/TypeWritten";
@@ -6,14 +7,49 @@ import RoomOne from "./components/ui/RoomOne";
 import RoomTwo from "./components/ui/RoomTwo";
 import Footer from "./components/ui/Footer";
 import { BentoGridDemo } from "./components/ui/BentoGridDemo";
-import { Mail, MapPinIcon, Phone } from "lucide-react";
+import { MapPinIcon, Phone } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
 export default function Home() {
+  const searchParams = useSearchParams();
+  const part = searchParams.get('part');
+  const homeRef = useRef(null);
+  const roomRef = useRef(null);
+  const photoRef = useRef(null);
+  const activityRef = useRef(null);
+  const contactRef = useRef(null);
+  console.log(part);
+  useEffect(()=>{
+    if (part === 'home' && homeRef.current) {
+      (homeRef.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
+    }
+  
+    // Room Section
+    if (part === 'room' && roomRef.current) {
+      (roomRef.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
+    }
+  
+    // Photo Section
+    if (part === 'photo' && photoRef.current) {
+      (photoRef.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
+    }
+  
+    // Activity Section
+    if (part === 'activity' && activityRef.current) {
+      (activityRef.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
+    }
+  
+    // Contact Section
+    if (part === 'contact' && contactRef.current) {
+      (contactRef.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
+    }
+  },[part])
   return (
     <main className="">
       <div>
         <Navbar />
       </div>
-      <section className="">
+      <section ref={homeRef} className="">
        <Image
           src="/cover.jpg" // Replace with your image path
           alt="Background Image" // Provide an alt text description
@@ -35,7 +71,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="p-3">
+      <section ref={roomRef} className="p-3">
         <div className="font-bold text-3xl flex w-full justify-center items-center gap-3">
           <div className="w-full h-1 bg-black"></div>
           <p>Room</p>
@@ -46,7 +82,7 @@ export default function Home() {
           <RoomTwo />
         </div>
       </section>
-      <section className="p-3">
+      <section ref={photoRef} className="p-3">
         <div className="font-bold text-lg md:text-3xl flex w-full justify-center items-center gap-3">
           <div className="w-full h-1 bg-black"></div>
           <p>Photos</p>
@@ -54,7 +90,7 @@ export default function Home() {
         </div>
         <ParallaxScrollDemo />
       </section>
-      <section className="p-3">
+      <section ref={activityRef} className="p-3">
         <div className="font-bold text-lg md:text-3xl flex w-full justify-center items-center gap-3">
           <div className="w-full h-1 bg-black"></div>
           <p>Activities</p>
@@ -64,7 +100,7 @@ export default function Home() {
           <BentoGridDemo />
         </div>
       </section>
-      <section className="p-3">
+      <section ref={contactRef} className="p-3">
         <div className="font-bold text-lg md:text-3xl flex w-full justify-center items-center gap-3">
           <div className="w-full h-1 bg-black"></div>
           <p>Contact </p>
