@@ -10,6 +10,8 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import Image from "next/image";
+import { Bike } from "lucide-react";
 
 export function BentoGridDemo() {
   return (
@@ -20,7 +22,6 @@ export function BentoGridDemo() {
           title={item.title}
           description={item.description}
           header={item.header}
-          icon={item.icon}
           className={i === 3 || i === 6 ? "md:col-span-2" : ""}
         />
       ))}
@@ -32,46 +33,29 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    title: "Kayaking at Our Resort",
+    description: "Experience the tranquility of gliding along the serene waters of our resort's private lagoon in a sleek kayak, surrounded by breathtaking natural beauty.",
+    header: <Image alt="kayak" width={300} height={300} src={'/kayak.jpg'} className="rounded-lg w-full overflow-hidden object-cover" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    title: "Experience Fishing at Our Resort",
+    description: "Enjoy a day of serene fishing in our resort's private lake, surrounded by stunning natural scenery.",
+    header: <Image alt="fishing" width={300} height={300} src={'/fishing.jpg'} className="rounded-lg overflow-hidden object-cover" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    title: "Convenience at Your Fingertips: Explore Our Resort's Minimar",
+    description: "Stocked with all your essentials and a variety of indulgences, our resort's minimart ensures convenience and comfort throughout your stay.",
+    header: <Image alt="minimart" width={300} height={300} src={'/minimart.jpg'} className="rounded-lg w-full overflow-hidden object-cover" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Discover Archery at Our Resort",
     description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+      "Channel your inner marksman and experience the thrill of precision with our resort's exhilarating archery activities, set against the backdrop of breathtaking natural surroundings",
+    header: <Image alt="arrow" width={3000} height={3000} src={'/arrow.jpg'} className="rounded-lg w-full overflow-hidden object-cover" />,
   },
   {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    title: "Motorcycle Experiences at Our Resort",
+    description: "Embark on thrilling motorcycle journeys through scenic routes and rugged terrain, exploring the wonders of our resort's surrounding landscapes with adrenaline-pumping excitement.",
+    header: <Image alt="motor" width={300} height={300} src={'/motor.jpg'} className="rounded-lg w-full overflow-hidden object-cover" />,
   },
-//   {
-//     title: "The Joy of Creation",
-//     description: "Experience the thrill of bringing ideas to life.",
-//     header: <Skeleton />,
-//     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-//   },
-//   {
-//     title: "The Spirit of Adventure",
-//     description: "Embark on exciting journeys and thrilling discoveries.",
-//     header: <Skeleton />,
-//     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-//   },
 ];
