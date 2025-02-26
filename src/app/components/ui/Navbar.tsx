@@ -5,7 +5,7 @@ import { Menu } from 'lucide-react'
 
 export default function Navbar() {
   return (
-    <div className='z-10 absolute text-white font-bold text-sm lg:text-sm flex items-center w-full justify-between py-3 px-3 md:px-9 shadow-white'>
+    <div className='z-10  absolute text-white font-bold text-sm lg:text-sm flex items-center w-full justify-between py-3 px-3 md:px-9 shadow-white'>
         <div className='flex gap-3 items-center'>
             <Image
              src="/logo.jpg" // Replace with your image path
